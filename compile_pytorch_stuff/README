@@ -1,0 +1,12 @@
+Used viable/strict branch to compile the wheel in this directory.
+Run pytorch_env_vars to set up environment variables for setup.py.
+Versions of required softwares are as follows:
+    cuda-11.4, cudnn-8, gcc-10, g++-10, python-3.11
+After running pip install pytorch_wheel_name.whl link libstdc++.so.6
+of anaconda virtual environment to /usr/lib/x86_64-linux-gnu/libstdc++.so.6,
+to remove GLIBXX version error.
+
+# Side note: I had to first use gcc-7,g++-7 to start setup.py compilation
+# then when build failed, switch to gcc-10,g++-10 and rerun setup.py
+# without cleaning build directory to compile a working build without
+# compilation throwing errors.
